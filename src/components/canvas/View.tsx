@@ -1,11 +1,11 @@
-'use client'
+'use client';
 
-import { forwardRef, HTMLAttributes, Suspense, useImperativeHandle, useRef } from 'react'
-import { OrbitControls, PerspectiveCamera, View as ViewImpl } from '@react-three/drei'
-import { Three } from '@/helpers/components/Three'
-import * as ITHREE from 'three'
+import { forwardRef, HTMLAttributes, Suspense, useImperativeHandle, useRef } from 'react';
+import { OrbitControls, PerspectiveCamera, View as ViewImpl } from '@react-three/drei';
+import { Three } from '@/helpers/components/Three';
+import * as ITHREE from 'three';
 
-type CommonProps = { color?: ITHREE.ColorRepresentation }
+type CommonProps = { color?: ITHREE.ColorRepresentation };
 
 export const Common = ({ color }: CommonProps) => (
   <Suspense fallback={null}>
@@ -15,15 +15,15 @@ export const Common = ({ color }: CommonProps) => (
     <pointLight position={[-10, -10, -10]} color='blue' decay={0.2} />
     <PerspectiveCamera makeDefault fov={40} position={[0, 0, 6]} />
   </Suspense>
-)
+);
 
 type ViewProps = HTMLAttributes<HTMLDivElement> & {
-  orbit?: boolean
-}
+  orbit?: boolean;
+};
 
 const View = forwardRef<HTMLElement, ViewProps>(({ children, orbit, ...props }, ref) => {
-  const localRef = useRef(null)
-  useImperativeHandle(ref, () => localRef.current)
+  const localRef = useRef(null);
+  useImperativeHandle(ref, () => localRef.current);
 
   return (
     <>
@@ -35,8 +35,8 @@ const View = forwardRef<HTMLElement, ViewProps>(({ children, orbit, ...props }, 
         </ViewImpl>
       </Three>
     </>
-  )
-})
-View.displayName = 'View'
+  );
+});
+View.displayName = 'View';
 
-export { View }
+export { View };

@@ -9,10 +9,8 @@
   "proseWrap": "preserve",
   "quoteProps": "as-needed",
   "requirePragma": false,
-  "semi": false,
   "singleQuote": true,
   "tabWidth": 2,
   "trailingComma": "all",
-  "useTabs": false,
-  "vueIndentScriptAndStyle": false
+  "useTabs": false
 }

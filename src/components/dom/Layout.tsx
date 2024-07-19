@@ -1,10 +1,10 @@
-'use client'
+'use client';
 
-import { useRef } from 'react'
-import dynamic from 'next/dynamic'
+import { useRef } from 'react';
+import dynamic from 'next/dynamic';
 
-const Scene = dynamic(() => import('@/components/canvas/Scene'), { ssr: false })
-const Blob = dynamic(() => import('@/components/canvas/Blob').then((mod) => mod.Blob), { ssr: false })
+const Scene = dynamic(() => import('@/components/canvas/Scene'), { ssr: false });
+const Blob = dynamic(() => import('@/components/canvas/Blob').then((mod) => mod.Blob), { ssr: false });
 const View = dynamic(() => import('@/components/canvas/View').then((mod) => mod.View), {
   ssr: false,
   loading: () => (
@@ -19,11 +19,11 @@ const View = dynamic(() => import('@/components/canvas/View').then((mod) => mod.
       </svg>
     </div>
   ),
-})
-const Common = dynamic(() => import('@/components/canvas/View').then((mod) => mod.Common), { ssr: false })
+});
+const Common = dynamic(() => import('@/components/canvas/View').then((mod) => mod.Common), { ssr: false });
 
 const Layout = ({ children }) => {
-  const ref = useRef()
+  const ref = useRef();
 
   return (
     <div
@@ -55,7 +55,7 @@ const Layout = ({ children }) => {
         eventPrefix='client'
       />
     </div>
-  )
-}
+  );
+};
 
-export { Layout }
+export { Layout };
