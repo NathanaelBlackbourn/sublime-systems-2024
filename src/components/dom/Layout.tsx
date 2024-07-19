@@ -5,6 +5,7 @@ import dynamic from 'next/dynamic';
 
 const Scene = dynamic(() => import('@/components/canvas/Scene'), { ssr: false });
 const Blob = dynamic(() => import('@/components/canvas/Blob'), { ssr: false });
+const Room = dynamic(() => import('@/components/canvas/Room'), { ssr: false });
 const View = dynamic(() => import('@/components/canvas/View').then((mod) => mod.View), {
   ssr: false,
   loading: () => (
@@ -37,8 +38,9 @@ const Layout = ({ children }) => {
       }}
     >
       {children}
-      <View className='absolute top-0 flex h-screen w-full flex-col items-center justify-center'>
+      <View className='absolute top-0 flex h-screen w-full flex-col items-center justify-center' orbit>
         <Blob />
+        <Room />
         <Common />
       </View>
 

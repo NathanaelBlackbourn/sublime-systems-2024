@@ -10,9 +10,10 @@ type CommonProps = { color?: ITHREE.ColorRepresentation };
 export const Common = ({ color }: CommonProps) => (
   <Suspense fallback={null}>
     {color && <color attach='background' args={[color]} />}
-    <ambientLight />
-    <pointLight position={[20, 30, 10]} intensity={3} decay={0.2} />
-    <pointLight position={[-10, -10, -10]} color='blue' decay={0.2} />
+    <ambientLight intensity={3.5} />
+    <pointLight position={[100, 0, 0]} intensity={8} decay={0.3} />
+    <pointLight position={[-2000, 0, 0]} intensity={8} decay={0.3} />
+    <pointLight position={[0, 0, 0]} intensity={100} decay={1.2} />
     <PerspectiveCamera makeDefault fov={40} position={[0, 0, 6]} />
   </Suspense>
 );
@@ -31,7 +32,7 @@ const View = forwardRef<HTMLElement, ViewProps>(({ children, orbit, ...props }, 
       <Three>
         <ViewImpl track={localRef}>
           {children}
-          {orbit && <OrbitControls />}
+          {orbit && <OrbitControls maxDistance={15} />}
         </ViewImpl>
       </Three>
     </>
