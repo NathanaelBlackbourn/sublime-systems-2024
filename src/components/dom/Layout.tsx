@@ -4,7 +4,7 @@ import { useRef } from 'react';
 import dynamic from 'next/dynamic';
 
 const Scene = dynamic(() => import('@/components/canvas/Scene'), { ssr: false });
-const Blob = dynamic(() => import('@/components/canvas/Blob').then((mod) => mod.Blob), { ssr: false });
+const Blob = dynamic(() => import('@/components/canvas/Blob'), { ssr: false });
 const View = dynamic(() => import('@/components/canvas/View').then((mod) => mod.View), {
   ssr: false,
   loading: () => (
