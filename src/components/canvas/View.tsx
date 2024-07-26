@@ -11,8 +11,8 @@ export const Common = ({ color }: CommonProps) => (
   <Suspense fallback={null}>
     {color && <color attach='background' args={[color]} />}
     <ambientLight intensity={3.5} />
-    <pointLight position={[100, 0, 0]} intensity={8} decay={0.3} />
-    <pointLight position={[-2000, 0, 0]} intensity={8} decay={0.3} />
+    <pointLight position={[25, 0, 0]} intensity={8} decay={0.3} />
+    <pointLight position={[-100, 0, 0]} intensity={8} decay={0.3} />
     <pointLight position={[0, 0, 0]} intensity={100} decay={1.2} />
     <PerspectiveCamera makeDefault fov={40} position={[0, 0, 6]} />
   </Suspense>
