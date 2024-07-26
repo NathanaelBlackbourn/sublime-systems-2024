@@ -1,23 +1,20 @@
-import * as THREE from 'three';
-
-import { useCubeTexture } from '@react-three/drei';
-
 const Blob = ({ route = '/', ...props }) => {
-  const refractionMap = useCubeTexture(new Array(6).fill('panel.png'), {
-    path: 'img/environment/',
-  });
-
-  const reflectionMap = useCubeTexture(new Array(6).fill('panel.png'), {
-    path: 'img/environment/',
-  });
-
-  refractionMap.mapping = THREE.CubeRefractionMapping;
-  reflectionMap.mapping = THREE.CubeReflectionMapping;
-
   return (
     <mesh {...props}>
       <sphereGeometry args={[1, 64, 64]} />
-      <meshPhongMaterial color={'0xccfffd'} envMap={refractionMap} refractionRatio={0.985} reflectivity={1} />
+      <meshPhysicalMaterial
+        color={'white'}
+        roughness={0.1}
+        metalness={0.0}
+        // clearcoat={1.0}
+        // clearcoatRoughness={0.1}
+        transmission={1.0}
+        reflectivity={1.0}
+        // ior={1.5}
+        iridescence={1.0}
+        // envMap={}
+        // dispersion={0.5}
+      />
     </mesh>
   );
 };
