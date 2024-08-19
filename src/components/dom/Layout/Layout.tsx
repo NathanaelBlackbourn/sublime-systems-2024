@@ -52,7 +52,14 @@ const Layout = ({ children }) => {
         This site belongs to me, Nathanael Blackbourn, a web developer living in Gothenburg.
       </h1>
       <p className={classes.body}>
-        I&apos;m building something here. For now, if you would like to know more about me feel free to email me.
+        I&apos;m building something here. For now, if you would like to know more about me feel free to{' '}
+        <a className={classes.email} href={'mailto:nathanaelblackbourn@gmail.com'}>
+          email
+          <span className={classes.form}>
+            <div className={classes['icon-container']} />
+          </span>
+        </a>{' '}
+        me.
       </p>
     </div>
   );

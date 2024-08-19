@@ -3,10 +3,7 @@
 
   max-width: 65ch;
   font-size: 32px;
-}
-
-@mixin absolute {
-  position: absolute;
+  text-wrap: pretty;
 }
 
 @mixin center-horizontal {
@@ -24,16 +21,77 @@
 
 .header {
   @include text;
-  @include absolute;
   @include center-horizontal;
+
+  position: absolute;
 
   top: 75px;
 }
 
 .body {
   @include text;
-  @include absolute;
   @include center-horizontal;
 
+  position: absolute;
+
   bottom: 75px;
+}
+
+.email {
+  position: relative;
+
+  padding: 0px 1.3em 5px 10px;
+
+  text-wrap: nowrap;
+
+  transition: color 0.5s;
+
+  &:hover {
+    color: white;
+
+    .icon-container {
+      height: 5em;
+      width: 5em;
+    }
+
+    .form {
+      border-color: #1100ff;
+    }
+  }
+}
+
+.form {
+  position: absolute;
+
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+
+  overflow: hidden;
+
+  border: 1px solid black;
+  border-radius: 99999px;
+
+  transition: border-color 0.5s;
+}
+
+.icon-container {
+  position: absolute;
+  right: 0.2em;
+  top: 50%;
+  transform: translate(10%, -50%);
+
+  height: 1em;
+  width: 1em;
+
+  background: #1100ff;
+
+  border-radius: 50%;
+
+  transition-property: height, width;
+  transition-duration: 0.5s;
+  transform-origin: center;
+
+  z-index: -1;
 }
