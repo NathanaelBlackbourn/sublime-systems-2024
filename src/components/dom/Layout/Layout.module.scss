@@ -1,7 +1,39 @@
+@mixin text {
+  color: black;
+
+  max-width: 65ch;
+  font-size: 32px;
+}
+
+@mixin absolute {
+  position: absolute;
+}
+
+@mixin center-horizontal {
+  left: 50%;
+  transform: translateX(-50%);
+}
+
 .container {
   position: relative;
   width: 100%;
   height: 100%;
   overflow: auto;
   touch-action: auto;
+}
+
+.header {
+  @include text;
+  @include absolute;
+  @include center-horizontal;
+
+  top: 75px;
+}
+
+.body {
+  @include text;
+  @include absolute;
+  @include center-horizontal;
+
+  bottom: 75px;
 }

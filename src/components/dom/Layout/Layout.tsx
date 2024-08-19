@@ -48,7 +48,12 @@ const Layout = ({ children }) => {
         eventSource={ref}
         eventPrefix='client'
       />
-      <h1>This site belong to me, Nathanael Blackbourn, a web developer living in Gothenburg.</h1>
+      <h1 className={classes.header}>
+        This site belongs to me, Nathanael Blackbourn, a web developer living in Gothenburg.
+      </h1>
+      <p className={classes.body}>
+        I&apos;m building something here. For now, if you would like to know more about me feel free to email me.
+      </p>
     </div>
   );
 };
