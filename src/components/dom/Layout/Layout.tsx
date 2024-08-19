@@ -2,6 +2,7 @@
 
 import { useRef } from 'react';
 import dynamic from 'next/dynamic';
+import classes from './Layout.module.scss';
 
 const Scene = dynamic(() => import('@/components/canvas/Scene'), { ssr: false });
 const Blob = dynamic(() => import('@/components/canvas/Blob'), { ssr: false });
@@ -27,16 +28,7 @@ const Layout = ({ children }) => {
   const ref = useRef();
 
   return (
-    <div
-      ref={ref}
-      style={{
-        position: 'relative',
-        width: ' 100%',
-        height: '100%',
-        overflow: 'auto',
-        touchAction: 'auto',
-      }}
-    >
+    <div ref={ref} className={classes.container}>
       {children}
       <View className='absolute top-0 flex h-screen w-full flex-col items-center justify-center' orbit>
         <Blob />
@@ -56,6 +48,7 @@ const Layout = ({ children }) => {
         eventSource={ref}
         eventPrefix='client'
       />
+      <h1>This site belong to me, Nathanael Blackbourn, a web developer living in Gothenburg.</h1>
     </div>
   );
 };
