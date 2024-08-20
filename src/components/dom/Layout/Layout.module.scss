@@ -1,10 +1,9 @@
 // TODO: Set up import alias
 @import '../../../styles/breakpoints';
+@import '../../../styles/colors';
 
 $text-offset-sm: 20px;
 $text-offset-lg: 50px;
-
-$blue: #1100ff;
 
 @mixin text($edge: 'top') {
   position: absolute;
