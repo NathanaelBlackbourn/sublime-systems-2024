@@ -57,9 +57,9 @@ const Layout = ({ children }) => {
         <a className={classes.email} href={'mailto:nathanaelblackbourn@gmail.com'}>
           email
           <span className={classes.form}>
-            <div className={classes['icon-container']}>
+            <span className={classes['icon-container']}>
               <ArrowUpRight className={classes.arrow} />
-            </div>
+            </span>
           </span>
         </a>{' '}
         me.
