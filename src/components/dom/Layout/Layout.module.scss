@@ -1,9 +1,37 @@
-@mixin text {
+@import '../../../styles/breakpoints';
+
+$text-offset-sm: 20px;
+$text-offset-lg: 50px;
+
+@mixin text($edge: 'top') {
+  position: absolute;
+  left: 5%;
+
   color: black;
 
-  max-width: 45ch;
+  width: 30ch;
+  max-width: 90%;
   font-size: 32px;
   text-wrap: pretty;
+
+  @media (min-width: $lg) {
+    font-size: 48px;
+    max-width: 70%;
+  }
+
+  @if $edge == 'top' {
+    top: $text-offset-sm;
+
+    @media (min-width: $lg) {
+      top: $text-offset-lg;
+    }
+  } @else if $edge == 'bottom' {
+    bottom: $text-offset-sm;
+
+    @media (min-width: $lg) {
+      bottom: $text-offset-lg;
+    }
+  }
 }
 
 @mixin center-horizontal {
@@ -20,21 +48,13 @@
 }
 
 .header {
-  @include text;
-  @include center-horizontal;
-
-  position: absolute;
-
-  top: 75px;
+  @include text('top');
 }
 
 .body {
-  @include text;
-  @include center-horizontal;
+  @include text('bottom');
 
-  position: absolute;
-
-  bottom: 75px;
+  transform: translateY(0%); // Unsure why required to position email form correctly
 }
 
 .email {
