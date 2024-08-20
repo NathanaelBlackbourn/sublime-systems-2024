@@ -1,7 +1,10 @@
+// TODO: Set up import alias
 @import '../../../styles/breakpoints';
 
 $text-offset-sm: 20px;
 $text-offset-lg: 50px;
+
+$blue: #1100ff;
 
 @mixin text($edge: 'top') {
   position: absolute;
@@ -91,7 +94,7 @@ $text-offset-lg: 50px;
 
   overflow: hidden;
 
-  border: 1px solid #1100ff;
+  border: 1px solid $blue;
   border-radius: 99999px;
 
   transition: scale 0.3s;
@@ -108,7 +111,7 @@ $text-offset-lg: 50px;
   height: 1em;
   width: 1em;
 
-  background: #1100ff;
+  background: $blue;
 
   border-radius: 50%;
 
