@@ -1,7 +1,7 @@
 @mixin text {
   color: black;
 
-  max-width: 65ch;
+  max-width: 45ch;
   font-size: 32px;
   text-wrap: pretty;
 }
@@ -41,21 +41,22 @@
   position: relative;
 
   padding: 0px 1.3em 5px 10px;
+  margin: 0 0.1em;
 
   text-wrap: nowrap;
 
-  transition: color 0.5s;
+  transition: color 0.3s;
 
   &:hover {
     color: white;
 
     .icon-container {
-      height: 5em;
-      width: 5em;
+      height: 10em;
+      width: 10em;
     }
 
     .form {
-      border-color: #1100ff;
+      scale: 1.1;
     }
   }
 }
@@ -70,17 +71,19 @@
 
   overflow: hidden;
 
-  border: 1px solid black;
+  border: 1px solid #1100ff;
   border-radius: 99999px;
 
-  transition: border-color 0.5s;
+  transition: scale 0.3s;
+
+  z-index: -1;
 }
 
 .icon-container {
   position: absolute;
-  right: 0.2em;
+  right: 0.6em;
   top: 50%;
-  transform: translate(10%, -50%);
+  transform: translate(50%, -50%);
 
   height: 1em;
   width: 1em;
@@ -90,8 +93,18 @@
   border-radius: 50%;
 
   transition-property: height, width;
-  transition-duration: 0.5s;
+  transition-duration: 0.3s;
   transform-origin: center;
+}
 
-  z-index: -1;
+.arrow {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+
+  width: 0.8em;
+  height: 0.8em;
+
+  fill: white;
 }

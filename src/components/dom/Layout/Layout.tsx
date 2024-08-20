@@ -3,6 +3,7 @@
 import { useRef } from 'react';
 import dynamic from 'next/dynamic';
 import classes from './Layout.module.scss';
+import { ArrowUpRight } from '@phosphor-icons/react/dist/ssr';
 
 const Scene = dynamic(() => import('@/components/canvas/Scene'), { ssr: false });
 const Blob = dynamic(() => import('@/components/canvas/Blob'), { ssr: false });
@@ -56,7 +57,9 @@ const Layout = ({ children }) => {
         <a className={classes.email} href={'mailto:nathanaelblackbourn@gmail.com'}>
           email
           <span className={classes.form}>
-            <div className={classes['icon-container']} />
+            <div className={classes['icon-container']}>
+              <ArrowUpRight className={classes.arrow} />
+            </div>
           </span>
         </a>{' '}
         me.
