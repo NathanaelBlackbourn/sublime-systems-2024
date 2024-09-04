@@ -4,6 +4,7 @@ import { useRef } from 'react';
 import dynamic from 'next/dynamic';
 import classes from './Layout.module.scss';
 import { ArrowUpRight } from '@phosphor-icons/react/dist/ssr';
+import Plane from '@/components/canvas/Plane';
 
 const Scene = dynamic(() => import('@/components/canvas/Scene'), { ssr: false });
 const Blob = dynamic(() => import('@/components/canvas/Blob'), { ssr: false });
@@ -32,7 +33,8 @@ const Layout = ({ children }) => {
     <div ref={ref} className={classes.container}>
       {children}
       <View className='absolute top-0 flex h-screen w-full flex-col items-center justify-center' orbit>
-        <Blob />
+        {/* <Blob /> */}
+        <Plane />
         <Room />
         <Common />
       </View>
