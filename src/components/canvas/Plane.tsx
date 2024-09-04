@@ -10,7 +10,7 @@ const Plane = () => {
   });
 
   useFrame(() => {
-    uniforms.current.uTime.value += 0.04;
+    uniforms.current.uTime.value += 0.01;
   });
 
   return (

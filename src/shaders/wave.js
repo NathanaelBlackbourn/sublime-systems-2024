@@ -3,8 +3,12 @@ export const vertex = `
 
   void main() {
     vec3 newPos = position;
-    float wave = 2.0 * sin(position.x * 2.0 + uTime);
+
+    float distance = length(position.xy);
+
+    float wave = 0.2 * sin(position.x + position.y + distance * 2.0 + uTime * 2.0);
     newPos.z += wave;
+
     gl_Position = projectionMatrix * modelViewMatrix * vec4(newPos, 1.0);
   }
 `;
