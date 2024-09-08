@@ -3,11 +3,9 @@
 import { useRef } from 'react';
 import dynamic from 'next/dynamic';
 import classes from './Layout.module.scss';
-import { ArrowUpRight } from '@phosphor-icons/react/dist/ssr';
 import Plane from '@/components/canvas/Plane';
 
 const Scene = dynamic(() => import('@/components/canvas/Scene'), { ssr: false });
-const Blob = dynamic(() => import('@/components/canvas/Blob'), { ssr: false });
 const Room = dynamic(() => import('@/components/canvas/Room'), { ssr: false });
 const View = dynamic(() => import('@/components/canvas/View').then((mod) => mod.View), {
   ssr: false,
@@ -51,21 +49,6 @@ const Layout = ({ children }) => {
         eventSource={ref}
         eventPrefix='client'
       />
-      <h1 className={classes.header}>
-        This site belongs to me, Nathanael Blackbourn, a web developer living in Gothenburg.
-      </h1>
-      <p className={classes.body}>
-        I&apos;m building something here. For now, if you would like to know more about me feel free to{' '}
-        <a className={classes.email} href={'mailto:nathanaelblackbourn@gmail.com'}>
-          email
-          <span className={classes.form}>
-            <span className={classes['icon-container']}>
-              <ArrowUpRight className={classes.arrow} />
-            </span>
-          </span>
-        </a>{' '}
-        me.
-      </p>
     </div>
   );
 };
