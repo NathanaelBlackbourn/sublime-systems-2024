@@ -23,6 +23,6 @@ export const fragment = `
 
   void main() {
     vec4 alphaColor = texture2D(uAlphaMap, vUv);
-    gl_FragColor = vec4(1.0, 0.0, 0.0, alphaColor.r);
+    gl_FragColor = vec4(0.0, 0.0, 0.0, alphaColor.r);
   }
 `;
