@@ -20,7 +20,13 @@ const Plane = () => {
   return (
     <mesh>
       <planeGeometry args={[10, 10, 30, 30]} />
-      <shaderMaterial vertexShader={vertex} fragmentShader={fragment} uniforms={uniforms.current} needsUpdate />
+      <shaderMaterial
+        vertexShader={vertex}
+        fragmentShader={fragment}
+        uniforms={uniforms.current}
+        needsUpdate
+        transparent
+      />
     </mesh>
   );
 };
