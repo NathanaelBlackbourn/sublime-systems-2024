@@ -9,7 +9,7 @@ const Plane = () => {
   const uniforms = useRef({
     uTime: { value: 0 },
     uAlphaMap: {
-      value: new TextureLoader().load('/textures/landing-texture.jpg'),
+      value: new TextureLoader().load('/textures/layout-texture.jpg'),
     },
   });
 
@@ -19,7 +19,7 @@ const Plane = () => {
 
   return (
     <mesh>
-      <planeGeometry args={[10, 10, 30, 30]} />
+      <planeGeometry args={[16, 9, 30, 30]} />
       <shaderMaterial
         vertexShader={vertex}
         fragmentShader={fragment}
