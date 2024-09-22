@@ -30,7 +30,7 @@ const Layout = ({ children }) => {
   return (
     <div ref={ref} className={classes.container}>
       {children}
-      <View className='absolute top-0 flex h-screen w-full flex-col items-center justify-center' orbit>
+      <View className='absolute top-0 flex h-screen w-full flex-col items-center justify-center'>
         {/* <Blob /> */}
         <Plane />
         <Room />

@@ -14,7 +14,7 @@ export const Common = ({ color }: CommonProps) => (
     <pointLight position={[25, 0, 0]} intensity={8} decay={0.3} />
     <pointLight position={[-100, 0, 0]} intensity={8} decay={0.3} />
     <pointLight position={[0, 0, 0]} intensity={100} decay={1.2} />
-    <PerspectiveCamera makeDefault fov={40} position={[0, 0, 6]} />
+    <PerspectiveCamera makeDefault fov={40} position={[0, 0, 10]} />
   </Suspense>
 );
 
