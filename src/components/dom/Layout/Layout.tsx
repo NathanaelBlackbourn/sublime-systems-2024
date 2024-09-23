@@ -4,6 +4,7 @@ import { useRef } from 'react';
 import dynamic from 'next/dynamic';
 import classes from './Layout.module.scss';
 import Plane from '@/components/canvas/Plane';
+import IconText from '../IconText/IconText';
 
 const Scene = dynamic(() => import('@/components/canvas/Scene'), { ssr: false });
 const Room = dynamic(() => import('@/components/canvas/Room'), { ssr: false });
@@ -28,10 +29,9 @@ const Layout = ({ children }) => {
   const ref = useRef();
 
   return (
-    <div ref={ref} className={classes.container}>
+    <div ref={ref} className={classes['container']}>
       {children}
-      <View className='absolute top-0 flex h-screen w-full flex-col items-center justify-center'>
-        {/* <Blob /> */}
+      <View className={classes['view']}>
         <Plane />
         <Room />
         <Common />
@@ -49,6 +49,15 @@ const Layout = ({ children }) => {
         eventSource={ref}
         eventPrefix='client'
       />
+
+      <div className={classes['icon-text-upper']}>
+        <IconText element='h1'>Nathanael Blackbourn ⇒ Frontend developer</IconText>
+      </div>
+
+      <div className={classes['icon-text-lower']}>
+        <IconText icon={'mapPin'}>Gothenburg</IconText>
+        <IconText icon={'briefcase'}>Currently looking for employment or freelance work</IconText>
+      </div>
     </div>
   );
 };

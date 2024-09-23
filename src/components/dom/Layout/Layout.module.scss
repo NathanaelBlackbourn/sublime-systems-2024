@@ -1,46 +1,3 @@
-// TODO: Set up import alias
-@import '../../../styles/breakpoints';
-@import '../../../styles/colors';
-
-$text-offset-sm: 20px;
-$text-offset-lg: 50px;
-
-@mixin text($edge: 'top') {
-  position: absolute;
-  left: 5%;
-
-  color: black;
-
-  width: 30ch;
-  max-width: 90%;
-  font-size: 32px;
-  text-wrap: pretty;
-
-  @media (min-width: $lg) {
-    font-size: 48px;
-    max-width: 80%;
-  }
-
-  @if $edge == 'top' {
-    top: $text-offset-sm;
-
-    @media (min-width: $lg) {
-      top: $text-offset-lg;
-    }
-  } @else if $edge == 'bottom' {
-    bottom: $text-offset-sm;
-
-    @media (min-width: $lg) {
-      bottom: $text-offset-lg;
-    }
-  }
-}
-
-@mixin center-horizontal {
-  left: 50%;
-  transform: translateX(-50%);
-}
-
 .container {
   position: relative;
   width: 100%;
@@ -49,84 +6,25 @@ $text-offset-lg: 50px;
   touch-action: auto;
 }
 
-.header {
-  @include text('top');
-}
-
-.body {
-  @include text('bottom');
-
-  transform: translateY(0%); // Unsure why required to position email form correctly
-}
-
-.email {
-  position: relative;
-
-  padding: 0px 1.3em 5px 10px;
-  margin: 0 0.1em;
-
-  text-wrap: nowrap;
-
-  transition: color 0.3s;
-
-  &:hover {
-    color: white;
-
-    .icon-container {
-      height: 10em;
-      width: 10em;
-    }
-
-    .form {
-      scale: 1.1;
-    }
-  }
-}
-
-.form {
+.view {
   position: absolute;
-
   top: 0;
-  bottom: 0;
-  right: 0;
-  left: 0;
 
-  overflow: hidden;
-
-  border: 1px solid $blue;
-  border-radius: 99999px;
-
-  transition: scale 0.3s;
-
-  z-index: -1;
+  height: 100vh;
+  width: 100%;
 }
 
-.icon-container {
+.icon-text-upper {
   position: absolute;
-  right: 0.6em;
-  top: 50%;
-  transform: translate(50%, -50%);
-
-  height: 1em;
-  width: 1em;
-
-  background: $blue;
-
-  border-radius: 50%;
-
-  transition-property: height, width;
-  transition-duration: 0.3s;
-  transform-origin: center;
+  top: 15px;
+  left: 15px;
 }
 
-.arrow {
+.icon-text-lower {
   position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
+  bottom: 15px;
+  left: 15px;
 
-  width: 0.8em;
-  height: 0.8em;
-
-  fill: white;
+  display: flex;
+  gap: 30px;
 }

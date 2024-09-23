@@ -1,0 +1,33 @@
+@import '../../../styles/colors.scss';
+@import '../../../styles/typography.scss';
+
+.container {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.icon-container {
+  position: relative;
+
+  height: 35px;
+  width: 35px;
+  border-radius: 50%;
+  background-color: $blue;
+}
+
+.icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  height: 26px;
+  width: 26px;
+
+  fill: white;
+}
+
+.text {
+  @include iconText;
+}
