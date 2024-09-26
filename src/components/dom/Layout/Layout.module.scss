@@ -28,3 +28,40 @@
   display: flex;
   gap: 30px;
 }
+
+.loading-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 48rem;
+  width: 100%;
+}
+
+.loading-icon {
+  margin-left: -0.5rem;
+  margin-right: 1.5rem;
+  color: black;
+
+  width: 2.5rem;
+  height: 2.5rem;
+
+  animation: spin 1s linear infinite;
+
+  circle {
+    opacity: 0.25;
+  }
+
+  path {
+    opacity: 0.75;
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
