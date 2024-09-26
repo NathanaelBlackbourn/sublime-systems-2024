@@ -30,7 +30,6 @@ const Layout = ({ children }) => {
 
   return (
     <div ref={ref} className={classes['container']}>
-      {children}
       <View className={classes['view']}>
         <Plane />
         <Room />
@@ -49,6 +48,7 @@ const Layout = ({ children }) => {
         eventSource={ref}
         eventPrefix='client'
       />
+      {children}
 
       <Nav />
 

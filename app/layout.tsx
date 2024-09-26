@@ -3,14 +3,14 @@ import '@/global.css';
 import localFont from 'next/font/local';
 
 const inter = localFont({
-  src: './fonts/InterVariable.woff2',
+  src: './InterVariable.woff2',
   weight: '100-900',
   display: 'swap',
 });
 
 export const metadata = {
   title: 'SUBLIME SYSTEMS',
-  description: 'Website of Nathanael Blackbour, web developer.',
+  description: 'Website of Nathanael Blackbourn, web developer.',
 };
 
 export default function RootLayout({ children }) {
