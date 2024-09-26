@@ -1,0 +1,55 @@
+@import '../../../styles/_typography.scss';
+@import '../../../styles/_colors.scss';
+
+.nav {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+
+  border-radius: 99999px;
+  border: 1px solid $blue;
+
+  padding: 3px;
+  overflow: hidden;
+}
+
+.list {
+  display: flex;
+  gap: 2px;
+}
+
+.link {
+  @include text-md;
+
+  padding: 5px 10px;
+  border-radius: 99999px;
+
+  &:hover {
+    color: $blue;
+  }
+}
+
+.active-link {
+  background-color: $blue;
+  color: white;
+  pointer-events: none;
+}
+
+@mixin bg {
+  position: absolute;
+  bottom: 2px;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-radius: 99999px;
+
+  transition: all 0.1s linear;
+
+  pointer-events: none;
+}
+
+.hover-bg {
+  @include bg;
+
+  background-color: rgba($blue, 0.2);
+}

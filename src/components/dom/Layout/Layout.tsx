@@ -5,6 +5,7 @@ import dynamic from 'next/dynamic';
 import classes from './Layout.module.scss';
 import Plane from '@/components/canvas/Plane';
 import IconText from '../IconText/IconText';
+import Nav from '../Nav/Nav';
 
 const Scene = dynamic(() => import('@/components/canvas/Scene'), { ssr: false });
 const Room = dynamic(() => import('@/components/canvas/Room'), { ssr: false });
@@ -48,6 +49,8 @@ const Layout = ({ children }) => {
         eventSource={ref}
         eventPrefix='client'
       />
+
+      <Nav />
 
       <div className={classes['icon-text-upper']}>
         <IconText element='h1'>Nathanael Blackbourn ⇒ Frontend developer</IconText>
