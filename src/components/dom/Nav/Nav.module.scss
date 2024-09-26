@@ -9,7 +9,6 @@
   border-radius: 99999px;
   border: 1px solid $blue;
 
-  padding: 3px;
   overflow: hidden;
 
   z-index: 100;
@@ -17,13 +16,14 @@
 
 .list {
   display: flex;
-  gap: 2px;
 }
 
 .link {
   @include text-md;
 
-  padding: 5px 10px;
+  display: block;
+
+  padding: 5px 9px;
   border-radius: 99999px;
 
   &:hover {
@@ -39,7 +39,7 @@
 
 @mixin bg {
   position: absolute;
-  bottom: 2px;
+  bottom: 0;
   left: 50%;
   width: 0;
   height: 0;
