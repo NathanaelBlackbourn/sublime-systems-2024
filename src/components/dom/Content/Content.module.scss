@@ -1,3 +1,6 @@
+@import '../../../styles/colors';
+@import '../../../styles/typography';
+
 .container {
   position: fixed;
   top: 0;
@@ -6,4 +9,32 @@
   height: 100%;
   width: 800px;
   background-color: white;
+
+  z-index: 90;
+}
+
+.close {
+  @include text-md;
+
+  position: absolute;
+  top: 15px;
+  left: 15px;
+
+  width: calc(1em + 15px);
+  height: calc(1em + 15px);
+
+  border-radius: 50%;
+  border: 1px solid $blue;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transition-property: background-color, color;
+  transition-duration: 0.2s;
+
+  &:hover {
+    background-color: $blue;
+    color: white;
+  }
 }
