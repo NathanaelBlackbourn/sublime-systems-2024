@@ -25,7 +25,7 @@ const Page = () => {
             <ImageLoader
               src={project.image}
               alt={`Image of project: ${project.title}`}
-              className={classes['project-image']}
+              className={classes['project-img']}
             />
 
             <div className={classes['button-container']}>

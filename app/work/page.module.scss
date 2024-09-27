@@ -31,6 +31,14 @@
   flex: 2;
 }
 
+.project-img {
+  transition: opacity 0.2s;
+
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
 .link {
   position: relative;
 }
