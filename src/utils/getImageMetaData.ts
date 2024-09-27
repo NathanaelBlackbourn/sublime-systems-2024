@@ -1,3 +1,5 @@
+'use server';
+
 import type { ImageMetaData } from '@/index';
 import path from 'path';
 import { promises as fs } from 'fs';
