@@ -22,7 +22,11 @@ const Page = () => {
                 </span>
               </span>
             </div>
-            <ImageLoader src={project.image} alt={`Image of project: ${project.title}`} />
+            <ImageLoader
+              src={project.image}
+              alt={`Image of project: ${project.title}`}
+              className={classes['project-image']}
+            />
           </Link>
           <p className={classes['project-description']}>{project.description}</p>
         </div>

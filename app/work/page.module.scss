@@ -1,0 +1,15 @@
+@import '../../src/styles/typography';
+
+.heading {
+  @include text-lg;
+  @include heading;
+}
+
+.project-container {
+  margin-bottom: 100px;
+}
+
+.project-title {
+  @include text-md;
+  @include heading(2);
+}

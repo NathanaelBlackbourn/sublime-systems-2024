@@ -1,4 +1,23 @@
+@mixin text-base {
+  max-width: 65ch;
+  font-weight: 350;
+}
+
 @mixin text-md {
+  @include text-base;
+
   font-size: 24px;
   color: black;
+}
+
+@mixin text-lg {
+  @include text-base;
+
+  font-size: 32px;
+}
+
+@mixin heading($margin-bottom: 3) {
+  max-width: 25ch;
+
+  margin-bottom: calc($margin-bottom * 1em);
 }

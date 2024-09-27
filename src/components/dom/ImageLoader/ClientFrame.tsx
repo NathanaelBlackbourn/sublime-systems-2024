@@ -8,9 +8,10 @@ interface IImageLoaderProps {
   src: string;
   alt: string;
   metadata: ImageMetaData;
+  className?: string;
 }
 
-const ClientFrame = ({ src, alt, metadata }: IImageLoaderProps) => {
+const ClientFrame = ({ src, alt, metadata, className }: IImageLoaderProps) => {
   const ref = useRef<HTMLDivElement>(null);
   const [isDomLoaded, setIsDomLoaded] = useState(false);
 
@@ -26,6 +27,7 @@ const ClientFrame = ({ src, alt, metadata }: IImageLoaderProps) => {
           alt={alt}
           width={ref.current?.clientWidth}
           height={ref.current?.clientWidth / metadata.aspectRatio}
+          className={className}
         />
       )}
     </div>
