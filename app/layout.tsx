@@ -1,5 +1,5 @@
 import { Layout } from '@/components/dom/Layout/Layout';
-import '@/global.css';
+import '@/global.scss';
 import localFont from 'next/font/local';
 
 const inter = localFont({

@@ -5,13 +5,30 @@
   @include heading;
 }
 
+.intro {
+  margin-bottom: 90px;
+}
+
 .project-container {
   margin-bottom: 100px;
+}
+
+.project-text-container {
+  display: flex;
+  gap: 20px;
+
+  margin-bottom: 45px;
 }
 
 .project-title {
   @include text-md;
   @include heading(2);
+
+  flex: 1;
+}
+
+.project-description {
+  flex: 2;
 }
 
 .link {

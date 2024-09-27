@@ -10,10 +10,17 @@ import Button from '@/components/dom/Button/Button';
 const Page = () => {
   return (
     <Content>
-      <h2 className={classes['heading']}>A small selection of the projects I worked on during my time at Hoy</h2>
+      <h2 className={classes['heading']}>A small selection of the projects I worked on during my internship at Hoy</h2>
+      <p className={classes['intro']}>
+        I worked on these projects solely as a developer, we received finished designs from the designers and were
+        tasked with building them.
+      </p>
       {projects.map((project, i) => (
         <div key={i} className={classes['project-container']}>
-          <h3 className={classes['project-title']}>{project.title}</h3>
+          <div className={classes['project-text-container']}>
+            <h3 className={classes['project-title']}>{project.title}</h3>
+            <p className={classes['project-description']}>{project.description}</p>
+          </div>
           <Link href={project.link} target='_blank' rel='noopener noreferrer' className={classes['link']}>
             <ImageLoader
               src={project.image}
@@ -27,7 +34,6 @@ const Page = () => {
               </Button>
             </div>
           </Link>
-          <p className={classes['project-description']}>{project.description}</p>
         </div>
       ))}
     </Content>

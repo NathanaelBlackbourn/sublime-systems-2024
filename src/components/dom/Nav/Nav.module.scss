@@ -1,7 +1,10 @@
-@import '../../../styles/_typography.scss';
-@import '../../../styles/_colors.scss';
+@import '../../../styles/typography';
+@import '../../../styles/colors';
+@import '../../../styles/ui';
 
 .nav {
+  @include ui-bg;
+
   position: absolute;
   top: 15px;
   right: 15px;

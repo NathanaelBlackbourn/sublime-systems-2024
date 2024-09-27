@@ -4,7 +4,7 @@ export const projects: Project[] = [
   {
     title: 'Elof Hansson',
     image: '/images/projects/elof-hansson.png',
-    description: `A marketing site for trade and real estate business Elof Hansson. Built with Next.js 14, Sanity, Tailwind, Framer Motion, ShadCN and more. Hosted on Vercel. This is the project I contributed most to during my internship. Aside from building numerous components and templates I devised a system for colour theming the company's "business areas" tied in with Tailwind.`,
+    description: `A marketing site for trade and real estate business Elof Hansson. Built with Next.js 14, Sanity, Tailwind, Framer Motion, ShadCN and more. Aside from building numerous components I devised a system for colour theming tied in with Tailwind and built a form builder component with ShadCN and React Hook Form which enables the customer to fully customise the contact form via Sanity.`,
     link: 'https://www.elofhansson.com/',
   },
   {
