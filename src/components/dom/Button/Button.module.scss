@@ -1,0 +1,79 @@
+@import '../../../styles/colors';
+@import '../../../styles/ui';
+@import '../../../styles/typography';
+
+.container {
+  @include text-md;
+
+  position: relative;
+
+  padding: 0.1em 1.6em 0.2em 10px;
+  margin: 0 0.1em;
+
+  text-wrap: nowrap;
+
+  transition: color 0.3s;
+
+  &:hover {
+    color: white;
+
+    .icon-container {
+      height: 30em;
+      width: 30em;
+    }
+
+    .form {
+      scale: 1.1;
+    }
+  }
+}
+
+.form {
+  @include ui-bg;
+
+  position: absolute;
+
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+
+  overflow: hidden;
+
+  border: 1px solid $blue;
+  border-radius: 99999px;
+
+  transition: scale 0.3s;
+
+  z-index: -1;
+}
+
+.icon-container {
+  position: absolute;
+  right: 0.74em;
+  top: 50%;
+  transform: translate(50%, -50%);
+
+  height: 1.3em;
+  width: 1.3em;
+
+  background: $blue;
+
+  border-radius: 50%;
+
+  transition-property: height, width;
+  transition-duration: 0.3s;
+  transform-origin: center;
+}
+
+.icon {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+
+  width: 0.8em;
+  height: 0.8em;
+
+  fill: white;
+}

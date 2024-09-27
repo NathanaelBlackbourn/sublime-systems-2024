@@ -8,6 +8,8 @@ declare module '*.frag' {
   export default content;
 }
 
+export type IconName = 'arrowRight' | 'arrowUpRight' | 'briefcase' | 'download' | 'mapPin' | 'x';
+
 export type Project = {
   title: string;
   image: string;
