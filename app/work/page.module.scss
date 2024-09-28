@@ -1,5 +1,5 @@
 @import '../../src/styles/typography';
-
+@import '../../src/styles/breakpoints';
 .heading {
   @include text-lg;
   @include heading;
@@ -15,14 +15,19 @@
 
 .project-text-container {
   display: flex;
+  flex-direction: column;
   gap: 20px;
 
   margin-bottom: 45px;
+
+  @media (min-width: $md) {
+    flex-direction: row;
+  }
 }
 
 .project-title {
   @include text-md;
-  @include heading(2);
+  @include heading(1);
 
   flex: 1;
 }
