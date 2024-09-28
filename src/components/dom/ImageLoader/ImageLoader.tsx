@@ -11,7 +11,7 @@ const ImageLoader = async ({ src, alt, className }: IImageLoaderProps) => {
   const imageMetaData = await getImageMetaData(src);
 
   return (
-    <div style={{ width: '100%', aspectRatio: imageMetaData.aspectRatio }} className={className}>
+    <div style={{ width: '100%', aspectRatio: imageMetaData.aspectRatio, position: 'relative' }} className={className}>
       <Image src={src} alt={alt} layout='fill' />
     </div>
   );

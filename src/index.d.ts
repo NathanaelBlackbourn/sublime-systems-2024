@@ -8,6 +8,29 @@ declare module '*.frag' {
   export default content;
 }
 
+export type Experience = {
+  company: string;
+  role: string;
+  description: string;
+  startDate: string;
+  endDate: string;
+};
+
+export type Education = {
+  institution: string;
+  location: string;
+  qualification: string;
+  description: string;
+  startDate: string;
+  endDate: string;
+};
+
+export type ImageMetaData = {
+  width: number;
+  height: number;
+  aspectRatio: number;
+};
+
 export type IconName = 'arrowRight' | 'arrowUpRight' | 'briefcase' | 'download' | 'mapPin' | 'x';
 
 export type Project = {
@@ -15,10 +38,4 @@ export type Project = {
   image: string;
   description: string;
   link: string;
-};
-
-export type ImageMetaData = {
-  width: number;
-  height: number;
-  aspectRatio: number;
 };

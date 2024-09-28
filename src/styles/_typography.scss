@@ -24,6 +24,8 @@
 }
 
 @mixin heading($margin-bottom: 3) {
+  @include text-base;
+
   max-width: 25ch;
 
   margin-bottom: calc($margin-bottom * 1em);

@@ -1,6 +1,6 @@
 import type { Project } from '../index.d';
 
-export const projects: Project[] = [
+const projects: Project[] = [
   {
     title: 'Elof Hansson',
     image: '/images/projects/elof-hansson.png',
@@ -20,3 +20,5 @@ export const projects: Project[] = [
     link: 'https://www.sanktjorgenpark.se/',
   },
 ];
+
+export default projects;

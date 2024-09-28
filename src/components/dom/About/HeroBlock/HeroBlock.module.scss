@@ -1,0 +1,19 @@
+@import '../../../../styles/typography';
+@import '../../../../styles/layout';
+
+.grid-block {
+  @include grid-block;
+}
+
+.image-container {
+  width: 100%;
+  max-width: 300px;
+}
+
+.heading {
+  @include heading(2);
+}
+
+.description {
+  grid-column-start: 2;
+}

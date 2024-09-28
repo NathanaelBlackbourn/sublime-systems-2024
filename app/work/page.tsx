@@ -2,7 +2,7 @@ import ImageLoader from '@/components/dom/ImageLoader/ImageLoader';
 import classes from './page.module.scss';
 
 import Content from '@/components/dom/Content/Content';
-import { projects } from '@/data/projects';
+import projects from '@/data/projects';
 import { ArrowUpRight } from '@phosphor-icons/react/dist/ssr';
 import Link from 'next/link';
 import Button from '@/components/dom/Button/Button';
