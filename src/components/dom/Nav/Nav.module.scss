@@ -3,8 +3,6 @@
 @import '../../../styles/ui';
 
 .nav {
-  @include ui-bg;
-
   position: absolute;
   top: 15px;
   right: 15px;
@@ -15,6 +13,10 @@
   overflow: hidden;
 
   z-index: 100;
+}
+
+.content-nav {
+  @include ui-bg;
 }
 
 .list {

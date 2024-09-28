@@ -13,7 +13,7 @@ const Nav = () => {
   const pathname = usePathname();
 
   return (
-    <nav className={classes['nav']}>
+    <nav className={`${classes['nav']} ${pathname === '/' ? '' : classes['content-nav']}`}>
       <div
         className={classes['hover-bg']}
         {...(hovered && {
