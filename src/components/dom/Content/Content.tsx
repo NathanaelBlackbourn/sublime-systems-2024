@@ -12,7 +12,7 @@ const Content = ({ children }: IContentProps) => {
       <Link href='/' className={classes['close']}>
         <X />
       </Link>
-      {children}
+      <div className={classes['content-area']}>{children}</div>
     </div>
   );
 };
