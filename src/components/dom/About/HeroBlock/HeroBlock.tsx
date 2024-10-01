@@ -2,6 +2,9 @@ import ImageLoader from '../../ImageLoader/ImageLoader';
 import classes from './HeroBlock.module.scss';
 
 const HeroBlock = () => {
+  const description = `Originally from England, soon celebrating my tenth year living abroad. I like systems and aesthetics and am
+          most at home in the code.`;
+
   return (
     <div className={classes['grid-block']}>
       <div className={classes['image-container']}>
@@ -9,11 +12,9 @@ const HeroBlock = () => {
       </div>
       <div className={classes['text-container']}>
         <h2 className={classes['heading']}>Driven, receptive and independent junior frontend developer</h2>
-        <p className={classes['description']}>
-          Originally from England, soon celebrating my tenth year living abroad. I like systems and aesthetics and am
-          most at home in the code.
-        </p>
+        <p className={classes['description-lg']}>{description}</p>
       </div>
+      <div className={classes['description-sm']}>{description}</div>
     </div>
   );
 };

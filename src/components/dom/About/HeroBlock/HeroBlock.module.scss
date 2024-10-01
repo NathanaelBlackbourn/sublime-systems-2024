@@ -14,6 +14,22 @@
   @include heading(2);
 }
 
-.description {
+.description-lg {
+  display: none;
+
   grid-column-start: 2;
+
+  @media (min-width: $md) {
+    display: block;
+  }
+}
+
+.description-sm {
+  margin-top: 30px;
+
+  grid-column: 1 / -1;
+
+  @media (min-width: $md) {
+    display: none;
+  }
 }
