@@ -1,0 +1,30 @@
+@import '../../../../styles/layout';
+@import '../../../../styles/typography';
+
+.grid-block {
+  @include grid-block;
+}
+
+.dates-container {
+  position: relative;
+
+  border: 1px solid black;
+  border-radius: 99999px;
+  padding: 5px 9px;
+
+  width: fit-content;
+
+  grid-column: 1 / 3;
+}
+
+.company {
+  @include heading(1);
+}
+
+.role {
+  @include heading(1);
+}
+
+.description {
+  grid-column: 1 / 3;
+}
