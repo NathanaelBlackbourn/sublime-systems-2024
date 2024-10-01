@@ -32,7 +32,11 @@
   border-radius: 99999px;
 
   &:hover {
-    color: $blue;
+    color: white;
+
+    @media (min-width: $md) {
+      color: $blue;
+    }
   }
 }
 
@@ -59,4 +63,6 @@
   @include bg;
 
   background-color: rgba($blue, 0.2);
+
+  z-index: -10;
 }
