@@ -4,14 +4,26 @@
 .container {
   display: flex;
   align-items: center;
-  gap: 7px;
+  gap: 0.3em;
+}
+
+.body {
+  @include text-body;
+}
+
+.sm {
+  @include text-sm;
+}
+
+.md {
+  @include text-md;
 }
 
 .icon-container {
   position: relative;
 
-  height: 35px;
-  width: 35px;
+  height: 1.7em;
+  width: 1.7em;
   border-radius: 50%;
   background-color: $blue;
 }
@@ -22,12 +34,12 @@
   left: 50%;
   transform: translate(-50%, -50%);
 
-  height: 26px;
-  width: 26px;
+  height: 1.1em;
+  width: 1.1em;
 
   fill: white;
 }
 
 .text {
-  @include text-md;
+  font-size: inherit;
 }

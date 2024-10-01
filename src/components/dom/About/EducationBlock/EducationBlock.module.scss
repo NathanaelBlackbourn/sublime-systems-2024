@@ -1,0 +1,43 @@
+@import '../../../../styles/layout';
+@import '../../../../styles/typography';
+
+.grid-block {
+  @include grid-block;
+}
+
+.info-container {
+  display: flex;
+  gap: 1em;
+
+  grid-column: 1 / -1;
+}
+
+.institution-container {
+  @include heading(1);
+
+  grid-column: 1 / -1;
+
+  @media (min-width: $md) {
+    grid-column: 1 / 2;
+  }
+}
+
+.institution {
+  @include text-md;
+  @include heading(0.3);
+
+  grid-column: 1 / -1;
+
+  @media (min-width: $md) {
+    grid-column: 1 / 2;
+  }
+}
+
+.qualification {
+  @include text-md;
+  @include heading(1);
+}
+
+.description {
+  grid-column: 1 / -1;
+}

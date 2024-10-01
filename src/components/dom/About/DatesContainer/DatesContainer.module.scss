@@ -1,0 +1,22 @@
+@import '../../../../styles/typography';
+
+.dates-container {
+  @include text-sm;
+
+  position: relative;
+  left: -3px;
+
+  border: 1px solid black;
+  border-radius: 99999px;
+  padding: 5px 9px;
+
+  margin-bottom: 1em;
+
+  width: fit-content;
+
+  grid-column: 1 / 3;
+}
+
+.dates {
+  font-size: inherit;
+}
