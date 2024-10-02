@@ -19,7 +19,7 @@ const Plane = () => {
 
   return (
     <mesh>
-      <planeGeometry args={[16, 9, 30, 30]} />
+      <planeGeometry args={[16, 9, 100, 100]} />
       <shaderMaterial
         vertexShader={vertex}
         fragmentShader={fragment}
