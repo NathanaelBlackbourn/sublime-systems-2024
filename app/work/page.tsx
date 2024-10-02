@@ -20,19 +20,21 @@ const Page = () => {
             <h3 className={classes['project-title']}>{project.title}</h3>
             <p className={classes['project-description']}>{project.description}</p>
           </div>
-          <Link href={project.link} target='_blank' rel='noopener noreferrer' className={classes['link']}>
-            <ImageLoader
-              src={project.image}
-              alt={`Image of project: ${project.title}`}
-              className={classes['project-img']}
-            />
+          <div className={classes['link-container']}>
+            <Link href={project.link} target='_blank' rel='noopener noreferrer' className={classes['link']}>
+              <ImageLoader
+                src={project.image}
+                alt={`Image of project: ${project.title}`}
+                className={classes['project-img']}
+              />
 
-            <div className={classes['button-container']}>
-              <Button icon='arrowUpRight' isButton={false} className={classes['button']}>
-                See project
-              </Button>
-            </div>
-          </Link>
+              <div className={classes['button-container']}>
+                <Button icon='arrowUpRight' className={classes['button']}>
+                  See project
+                </Button>
+              </div>
+            </Link>
+          </div>
         </div>
       ))}
     </Content>

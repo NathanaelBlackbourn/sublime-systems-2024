@@ -44,14 +44,17 @@
   }
 }
 
+.link-container {
+  position: relative;
+}
+
 .link {
   position: relative;
 }
 
 .button-container {
   position: absolute;
-  top: 10px;
-  right: 10px;
+  inset: 10px 10px auto auto;
 
   z-index: 10;
 }
