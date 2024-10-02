@@ -8,7 +8,7 @@ export const vertex = `
 
     float distance = length(position.xy);
 
-    float wave = 0.2 * sin(position.x + position.y + distance * 2.0 + uTime * 2.0);
+    float wave = 0.3 * sin(position.x + position.y + distance * 2.0 + uTime * 1.5);
     newPos.z += wave;
 
     vUv = uv;

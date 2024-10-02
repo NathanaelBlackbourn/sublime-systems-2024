@@ -39,7 +39,7 @@ const Layout = ({ children }) => {
   return (
     <div ref={ref} className={classes['container']}>
       <View className={classes['view']}>
-        <Bounds fit clip observe margin={windowDimensions.aspectRatio > 1 ? 0.6 : 0.8}>
+        <Bounds fit clip observe margin={windowDimensions.aspectRatio > 1 ? 0.6 : 0.7}>
           <Plane />
         </Bounds>
         <Room />
@@ -69,7 +69,7 @@ const Layout = ({ children }) => {
       <div className={classes['icon-text-lower']}>
         <IconText icon={'mapPin'}>Gothenburg</IconText>
         <div className={classes['briefcase-container']}>
-          <IconText icon={'briefcase'}>Currently looking for employment or freelance work</IconText>
+          <IconText icon={'briefcase'}>Looking for employment or freelance work</IconText>
         </div>
       </div>
 
