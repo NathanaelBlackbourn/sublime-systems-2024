@@ -22,9 +22,11 @@
   left: 15px;
 
   opacity: 0;
+  pointer-events: none;
 
-  @media (min-width: $md) {
+  @media (min-width: $lg) {
     opacity: 1;
+    pointer-events: auto;
   }
 }
 
@@ -35,7 +37,7 @@
   bottom: 15px;
   left: 15px;
 
-  @media (min-width: $md) {
+  @media (min-width: $lg) {
     display: flex;
     gap: 30px;
   }

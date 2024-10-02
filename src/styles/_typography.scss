@@ -21,7 +21,7 @@
 @mixin text-md {
   @include text-base;
 
-  font-size: 18px;
+  font-size: 20px;
   color: black;
 
   @media (min-width: $md) {
