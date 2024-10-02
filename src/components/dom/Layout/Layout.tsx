@@ -6,6 +6,8 @@ import classes from './Layout.module.scss';
 import Plane from '@/components/canvas/Plane';
 import IconText from '../IconText/IconText';
 import Nav from '../Nav/Nav';
+import { Bounds } from '@react-three/drei';
+import useWindowDimensions from '@/hooks/useWindowDimensions';
 
 const Scene = dynamic(() => import('@/components/canvas/Scene'), { ssr: false });
 const Room = dynamic(() => import('@/components/canvas/Room'), { ssr: false });
@@ -28,10 +30,14 @@ const Common = dynamic(() => import('@/components/canvas/View').then((mod) => mo
 const Layout = ({ children }) => {
   const ref = useRef();
 
+  const windowDimensions = useWindowDimensions();
+
   return (
     <div ref={ref} className={classes['container']}>
       <View className={classes['view']}>
-        <Plane />
+        <Bounds fit clip observe margin={windowDimensions.aspectRatio > 1 ? 0.6 : 0.8}>
+          <Plane />
+        </Bounds>
         <Room />
         <Common />
       </View>
@@ -58,7 +64,9 @@ const Layout = ({ children }) => {
 
       <div className={classes['icon-text-lower']}>
         <IconText icon={'mapPin'}>Gothenburg</IconText>
-        <IconText icon={'briefcase'}>Currently looking for employment or freelance work</IconText>
+        <div className={classes['briefcase-container']}>
+          <IconText icon={'briefcase'}>Currently looking for employment or freelance work</IconText>
+        </div>
       </div>
     </div>
   );

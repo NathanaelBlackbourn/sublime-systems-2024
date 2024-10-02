@@ -32,10 +32,10 @@
   border-radius: 99999px;
 
   &:hover {
-    color: white;
+    color: $blue;
 
-    @media (min-width: $md) {
-      color: $blue;
+    @media (hover: none) {
+      color: white;
     }
   }
 }
