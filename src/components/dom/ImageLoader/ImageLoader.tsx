@@ -5,14 +5,15 @@ interface IImageLoaderProps {
   src: string;
   alt: string;
   className?: string;
+  sizes?: string;
 }
 
-const ImageLoader = async ({ src, alt, className }: IImageLoaderProps) => {
+const ImageLoader = async ({ src, alt, className, sizes = '800px' }: IImageLoaderProps) => {
   const imageMetaData = await getImageMetaData(src);
 
   return (
     <div style={{ width: '100%', aspectRatio: imageMetaData.aspectRatio, position: 'relative' }} className={className}>
-      <Image src={src} alt={alt} layout='fill' />
+      <Image src={src} alt={alt} layout='fill' sizes={sizes} />
     </div>
   );
 };
