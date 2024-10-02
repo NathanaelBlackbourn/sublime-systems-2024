@@ -29,7 +29,7 @@ const Page = () => {
               />
             </Link>
             <div className={classes['button-container']}>
-              <Button icon='arrowUpRight' className={classes['button']}>
+              <Button icon='arrowUpRight' className={classes['button']} element='a' href={project.link}>
                 See project
               </Button>
             </div>
