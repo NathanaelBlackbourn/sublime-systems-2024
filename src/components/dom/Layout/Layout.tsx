@@ -1,6 +1,6 @@
 'use client';
 
-import { useRef } from 'react';
+import { useRef, useState } from 'react';
 import dynamic from 'next/dynamic';
 import classes from './Layout.module.scss';
 import Plane from '@/components/canvas/Plane';
@@ -39,9 +39,11 @@ const Layout = ({ children }) => {
   return (
     <div ref={ref} className={classes['container']}>
       <View className={classes['view']}>
-        <Bounds fit clip observe margin={windowDimensions.aspectRatio > 1 ? 0.6 : 0.7}>
-          <Plane />
-        </Bounds>
+        {windowDimensions && (
+          <Bounds fit clip observe margin={windowDimensions.aspectRatio > 1 ? 0.6 : 0.7}>
+            <Plane />
+          </Bounds>
+        )}
         <Room />
         <Common />
       </View>
