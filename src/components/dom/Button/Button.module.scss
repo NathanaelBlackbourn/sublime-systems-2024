@@ -7,7 +7,7 @@
 
   position: relative;
 
-  padding: 0.1em 1.6em 0.2em 10px;
+  padding: 0.2em 1.6em 0.2em 0.5em;
 
   text-wrap: nowrap;
 
@@ -22,14 +22,12 @@
     }
 
     .form {
-      scale: 1.1;
+      scale: 1.05;
     }
   }
 }
 
 .form {
-  @include ui-bg;
-
   position: absolute;
 
   top: 0;
@@ -45,6 +43,10 @@
   transition: scale 0.3s;
 
   z-index: -1;
+}
+
+.has-background {
+  @include ui-bg;
 }
 
 .icon-container {

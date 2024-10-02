@@ -10,9 +10,10 @@ interface IButtonProps {
   className?: string;
   onClick?: () => void;
   icon?: IconName;
+  hasBackground?: boolean;
 }
 
-const Button = ({ children, isButton = true, className, onClick, icon }: IButtonProps) => {
+const Button = ({ children, isButton = true, className, onClick, icon, hasBackground = true }: IButtonProps) => {
   return React.createElement(
     isButton ? 'button' : 'span',
     {
@@ -21,7 +22,7 @@ const Button = ({ children, isButton = true, className, onClick, icon }: IButton
     },
     <>
       {children}
-      <span className={classes['form']}>
+      <span className={`${classes['form']} ${hasBackground ? classes['has-background'] : ''}`}>
         <span className={classes['icon-container']}>
           <Icon icon={icon} className={classes['icon']} />
         </span>

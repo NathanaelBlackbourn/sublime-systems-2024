@@ -8,6 +8,8 @@ import IconText from '../IconText/IconText';
 import Nav from '../Nav/Nav';
 import { Bounds } from '@react-three/drei';
 import useWindowDimensions from '@/hooks/useWindowDimensions';
+import Button from '../Button/Button';
+import { usePathname } from 'next/navigation';
 
 const Scene = dynamic(() => import('@/components/canvas/Scene'), { ssr: false });
 const Room = dynamic(() => import('@/components/canvas/Room'), { ssr: false });
@@ -31,6 +33,8 @@ const Layout = ({ children }) => {
   const ref = useRef();
 
   const windowDimensions = useWindowDimensions();
+
+  const path = usePathname();
 
   return (
     <div ref={ref} className={classes['container']}>
@@ -67,6 +71,23 @@ const Layout = ({ children }) => {
         <div className={classes['briefcase-container']}>
           <IconText icon={'briefcase'}>Currently looking for employment or freelance work</IconText>
         </div>
+      </div>
+
+      <div className={classes['button-container']}>
+        <Button
+          icon={'download'}
+          hasBackground={path !== '/'}
+          onClick={() => window.open('/docs/CV_Nathanael-Blackbourn_en.pdf', '_blank')}
+        >
+          Download my CV
+        </Button>
+        <Button
+          icon={'arrowUpRight'}
+          hasBackground={path !== '/'}
+          onClick={() => window.open('mailto:nathanaelblackbourn@gmail.com')}
+        >
+          Email me
+        </Button>
       </div>
     </div>
   );
