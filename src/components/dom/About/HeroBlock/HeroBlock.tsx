@@ -3,7 +3,7 @@ import classes from './HeroBlock.module.scss';
 
 const HeroBlock = () => {
   const description = `Originally from England, soon celebrating my tenth year living abroad. I like systems and aesthetics and am
-          most at home in the code.`;
+          most at home in the code. Currently building sites as a freelancer while looking for a full-time position.`;
 
   return (
     <div className={classes['grid-block']}>
