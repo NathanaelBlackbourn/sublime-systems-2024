@@ -3,13 +3,14 @@
 import { useRef, useState } from 'react';
 import dynamic from 'next/dynamic';
 import classes from './Layout.module.scss';
-import Plane from '@/components/canvas/Plane';
+// import Plane from '@/components/canvas/Plane';
 import IconText from '../IconText/IconText';
 import Nav from '../Nav/Nav';
 import { Bounds } from '@react-three/drei';
 import useWindowDimensions from '@/hooks/useWindowDimensions';
 import Button from '../Button/Button';
 import { usePathname } from 'next/navigation';
+import HtmlOutlet from '@/components/canvas/HtmlOutlet/HtmlOutlet';
 
 const Scene = dynamic(() => import('@/components/canvas/Scene'), { ssr: false });
 const Room = dynamic(() => import('@/components/canvas/Room'), { ssr: false });
@@ -27,24 +28,18 @@ const View = dynamic(() => import('@/components/canvas/View').then((mod) => mod.
     </div>
   ),
 });
+
 const Common = dynamic(() => import('@/components/canvas/View').then((mod) => mod.Common), { ssr: false });
 
 const Layout = ({ children }) => {
   const ref = useRef();
-
-  const windowDimensions = useWindowDimensions();
 
   const path = usePathname();
 
   return (
     <div ref={ref} className={classes['container']}>
       <View className={classes['view']}>
-        {windowDimensions && (
-          <Bounds fit clip observe margin={windowDimensions.aspectRatio > 1 ? 0.6 : 0.7}>
-            <Plane />
-          </Bounds>
-        )}
-        <Room />
+        <HtmlOutlet />
         <Common />
       </View>
 

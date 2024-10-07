@@ -1,7 +1,7 @@
 'use client';
 
 import { forwardRef, HTMLAttributes, Suspense, useImperativeHandle, useRef } from 'react';
-import { PerspectiveCamera, View as ViewImpl } from '@react-three/drei';
+import { OrbitControls, PerspectiveCamera, View as ViewImpl } from '@react-three/drei';
 import { Three } from '@/helpers/components/Three';
 import * as THREE from 'three';
 
@@ -14,7 +14,8 @@ export const Common = ({ color }: CommonProps) => (
     <pointLight position={[25, 0, 0]} intensity={8} decay={0.3} />
     <pointLight position={[-100, 0, 0]} intensity={8} decay={0.3} />
     <pointLight position={[0, 0, 0]} intensity={100} decay={1.2} />
-    <PerspectiveCamera makeDefault position={[0, 0, 10]} />
+    <PerspectiveCamera makeDefault position={[0, 0, 27]} />
+    <OrbitControls />
   </Suspense>
 );
 
