@@ -1,4 +1,4 @@
-@import '../../../styles/breakpoints';
+@import '../../styles/breakpoints';
 
 .container {
   position: relative;
@@ -14,20 +14,6 @@
 
   height: 100vh;
   width: 100%;
-}
-
-.icon-text-upper {
-  position: absolute;
-  top: 15px;
-  left: 15px;
-
-  opacity: 0;
-  pointer-events: none;
-
-  @media (min-width: $lg) {
-    opacity: 1;
-    pointer-events: auto;
-  }
 }
 
 .icon-text-lower {

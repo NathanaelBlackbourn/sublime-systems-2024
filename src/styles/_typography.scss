@@ -35,6 +35,13 @@
   font-size: 32px;
 }
 
+@mixin text-xl {
+  @include text-base;
+
+  font-size: 136px;
+  line-height: 0.8;
+}
+
 @mixin heading($margin-bottom: 3) {
   @include text-base;
 

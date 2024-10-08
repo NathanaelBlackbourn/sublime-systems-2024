@@ -1,14 +1,11 @@
 'use client';
 
-import { useRef, useState } from 'react';
+import { useRef } from 'react';
 import dynamic from 'next/dynamic';
 import classes from './Layout.module.scss';
-// import Plane from '@/components/canvas/Plane';
-import IconText from '../IconText/IconText';
-import Nav from '../Nav/Nav';
-import { Bounds } from '@react-three/drei';
-import useWindowDimensions from '@/hooks/useWindowDimensions';
-import Button from '../Button/Button';
+import IconText from '../dom/IconText/IconText';
+import Nav from '../dom/Nav/Nav';
+import Button from '../dom/Button/Button';
 import { usePathname } from 'next/navigation';
 import HtmlOutlet from '@/components/canvas/HtmlOutlet/HtmlOutlet';
 
@@ -58,10 +55,6 @@ const Layout = ({ children }) => {
       {children}
 
       <Nav />
-
-      <div className={classes['icon-text-upper']}>
-        <IconText element='h1'>Nathanael Blackbourn ⇒ Frontend developer</IconText>
-      </div>
 
       <div className={classes['icon-text-lower']}>
         <IconText icon={'mapPin'}>Gothenburg</IconText>

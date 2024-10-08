@@ -1,0 +1,29 @@
+@import '../../../styles/typography';
+
+.heading-main {
+  @include text-xl;
+  position: relative;
+
+  width: 100%;
+  height: 100%;
+}
+
+$part-width: clamp(10ch, 50%, 50%);
+
+.heading-upper {
+  position: absolute;
+  top: 60px;
+  left: 0.1em;
+
+  width: $part-width;
+}
+
+.heading-lower {
+  position: absolute;
+  bottom: 120px;
+  right: 0.1em;
+
+  width: $part-width;
+
+  text-align: right;
+}
