@@ -15,7 +15,6 @@ export const Common = ({ color }: CommonProps) => (
     <pointLight position={[-100, 0, 0]} intensity={8} decay={0.3} />
     <pointLight position={[0, 0, 0]} intensity={100} decay={1.2} />
     <PerspectiveCamera makeDefault position={[0, 0, 27]} />
-    <OrbitControls />
   </Suspense>
 );
 
