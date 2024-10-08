@@ -7,10 +7,10 @@ import IconText from '../dom/IconText/IconText';
 import Nav from '../dom/Nav/Nav';
 import Button from '../dom/Button/Button';
 import { usePathname } from 'next/navigation';
-import HtmlOutlet from '@/components/canvas/HtmlOutlet/HtmlOutlet';
 
 const Scene = dynamic(() => import('@/components/canvas/Scene'), { ssr: false });
-const Room = dynamic(() => import('@/components/canvas/Room'), { ssr: false });
+// const Room = dynamic(() => import('@/components/canvas/Room'), { ssr: false });
+const HtmlOutlet = dynamic(() => import('@/components/canvas/HtmlOutlet/HtmlOutlet'), { ssr: false });
 const View = dynamic(() => import('@/components/canvas/View').then((mod) => mod.View), {
   ssr: false,
   loading: () => (
