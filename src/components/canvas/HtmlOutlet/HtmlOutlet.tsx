@@ -10,7 +10,7 @@ const HtmlOutlet = () => {
     <mesh>
       <planeGeometry />
       <meshBasicMaterial transparent opacity={0} />
-      <Html transform zIndexRange={[1, 0]} className={classes['html-portal']}>
+      <Html prepend transform zIndexRange={[-1, -2]} className={classes['html-portal']}>
         <htmlTunnel.Out />
       </Html>
     </mesh>

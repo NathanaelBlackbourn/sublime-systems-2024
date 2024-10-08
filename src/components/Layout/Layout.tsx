@@ -11,6 +11,7 @@ import { usePathname } from 'next/navigation';
 const Scene = dynamic(() => import('@/components/canvas/Scene'), { ssr: false });
 // const Room = dynamic(() => import('@/components/canvas/Room'), { ssr: false });
 const HtmlOutlet = dynamic(() => import('@/components/canvas/HtmlOutlet/HtmlOutlet'), { ssr: false });
+const WaveLayer = dynamic(() => import('@/components/canvas/WaveLayer/WaveLayer'), { ssr: false });
 const View = dynamic(() => import('@/components/canvas/View').then((mod) => mod.View), {
   ssr: false,
   loading: () => (
@@ -37,6 +38,7 @@ const Layout = ({ children }) => {
     <div ref={ref} className={classes['container']}>
       <View className={classes['view']}>
         <HtmlOutlet />
+        <WaveLayer />
         <Common />
       </View>
 

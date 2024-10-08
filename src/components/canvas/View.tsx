@@ -15,14 +15,11 @@ export const Common = ({ color }: CommonProps) => (
     <pointLight position={[-100, 0, 0]} intensity={8} decay={0.3} />
     <pointLight position={[0, 0, 0]} intensity={100} decay={1.2} />
     <PerspectiveCamera makeDefault position={[0, 0, 27]} />
+    <OrbitControls />
   </Suspense>
 );
 
-type ViewProps = HTMLAttributes<HTMLDivElement> & {
-  orbit?: boolean;
-};
-
-const View = forwardRef<HTMLElement, ViewProps>(({ children, ...props }, ref) => {
+const View = forwardRef<HTMLElement, HTMLAttributes<HTMLDivElement>>(({ children, ...props }, ref) => {
   const localRef = useRef(null);
   useImperativeHandle(ref, () => localRef.current);
 
