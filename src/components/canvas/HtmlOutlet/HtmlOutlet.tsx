@@ -3,6 +3,7 @@
 import classes from './HtmlOutlet.module.scss';
 
 import { Html } from '@react-three/drei';
+import htmlTunnel from './HtmlTunnel';
 
 const HtmlOutlet = () => {
   return (
@@ -10,7 +11,7 @@ const HtmlOutlet = () => {
       <planeGeometry />
       <meshBasicMaterial transparent opacity={0} />
       <Html transform zIndexRange={[1, 0]} className={classes['html-portal']}>
-        <h1>Hej</h1>
+        <htmlTunnel.Out />
       </Html>
     </mesh>
   );
