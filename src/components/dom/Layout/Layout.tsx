@@ -70,9 +70,6 @@ const Layout = ({ children }) => {
 
       <div className={classes['icon-text-lower']}>
         <IconText icon={'mapPin'}>Gothenburg</IconText>
-        <div className={classes['briefcase-container']}>
-          <IconText icon={'briefcase'}>Looking for employment or freelance work</IconText>
-        </div>
       </div>
 
       <div className={classes['button-container']}>
